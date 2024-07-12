@@ -1,6 +1,18 @@
 import React, { useState } from 'react'
 
 const HistorialConsumidor = (Historial) => {
+    const [valor, setValor] = useState(0);
+    const obtenerNombre = (valor) => {
+        const estado = estados.find(e => e.valor === parseInt(valor, 10));
+        return estado ? estado.nombre : 'Valor no encontrado';
+    };
+      
+      const estados = [
+        { valor: 1, nombre: 'Ordenado' },
+        { valor: 2, nombre: 'Preparando' },
+        { valor: 3, nombre: 'Enviado' },
+        { valor: 4, nombre: 'Entregado' }
+      ];
   return (
     <div>
         {Historial.Historial.map((item)=>{
@@ -12,7 +24,7 @@ const HistorialConsumidor = (Historial) => {
                                 
                     <p id='P_Descp_plato' className='HDesPlato'>{item.Descrp}</p>
                     <p id='P_Descp_plato' className='HDesPlato'>Cantidad: {item.Amount}</p>
-                    <p id='P_Descp_plato' className='HDesPlato'>EstadoPlato: {item.EstadoPlato}</p>
+                    <p id='P_Descp_plato' className='HDesPlato'>EstadoPlato: {obtenerNombre(item.EstadoPlato)}</p>
                     <p id='P_Descp_plato' className='HDesPlato'>Ultima actualizado: {item.updatedAt}</p>
                     
                     <div className='PPrecPlato'>

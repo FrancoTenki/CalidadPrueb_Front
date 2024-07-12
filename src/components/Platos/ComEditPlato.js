@@ -16,11 +16,15 @@ const ComEditPlato = () => {
     const param=useParams()
     //proceso para actualizar
     const update=async(e)=>{
-        e.preventDefault()
-        await axios.put(`${URI}+${param.id}`,{
-            ImgPlato:ImgPlato,Nombre:Nombre,Descrp:Descrp,Precio:Precio
-        })
-        navigete(`/${param.idres}/platos`)
+        if(Nombre===""|| Descrp==="" ||Precio===""){
+            alert("Faltan datos")
+        }else{
+            e.preventDefault()
+            await axios.put(`${URI}+${param.id}`,{
+                ImgPlato:ImgPlato,Nombre:Nombre,Descrp:Descrp,Precio:Precio
+            })
+            navigete(`/${param.idres}/platos`)
+        }
     }
 
     useEffect(()=>{

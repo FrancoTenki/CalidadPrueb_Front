@@ -59,13 +59,14 @@ const PedidoRestaurante = () => {
                     <p id='P_Descp_plato' className='HDesPlato'>Cantidad: {item.Amount}</p>
                     <br/>
                     {/* <p id='P_Descp_plato' className='HDesPlato'>EstadoPlato: {item.EstadoPlato}</p> */}
-                    <select value={item.EstadoPlato} onChange={(e) => actualizarCantidad(item.id, e.target.value)}>
+                    <select id='selctestado' value={item.EstadoPlato} onChange={(e) => actualizarCantidad(item.id, e.target.value)}>
                         {opcionesCantidad.map(opcion => (
                             <option key={opcion.valor} value={opcion.valor} >{opcion.nombre}</option>
                         ))}
                     </select>
+
                     <br/>
-                    <p className='HDesPlato'>Estado Plato actual: {opcionesCantidad.find(opcion => opcion.valor === item.EstadoPlato).nombre}</p>
+                    <p className='HDesPlato' id='estadopedidioP'>Estado Plato actual: {opcionesCantidad.find(opcion => opcion.valor === item.EstadoPlato).nombre}</p>
                     
                     <div className='PPrecPlato'>
                         <span id='Span_Precio_plato' className='PPresPlato'>S/ {item.Precio}</span>

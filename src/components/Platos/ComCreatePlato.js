@@ -15,12 +15,15 @@ const ComCrearRestaurante = () => {
     const Id_Restaurante=useParams(); 
 
     const store=async(e)=>{
-        e.preventDefault()
-        const res=await axios.post(`${URI}${Id_Restaurante.id}/newplato`,{ImgPlato:ImgPlato,
-            Nombre:Nombre,Descrp:Descrp,Precio:Precio,Id_Restaurante:Id_Restaurante.id})
-        console.log(res.data)
-        navigete(`/${Id_Restaurante.id}/platos`)
-        
+        if(Nombre===""|| Descrp==="" ||Precio===""){
+            alert("Faltan datos")
+        }else{
+            e.preventDefault()
+            const res=await axios.post(`${URI}${Id_Restaurante.id}/newplato`,{ImgPlato:ImgPlato,
+                Nombre:Nombre,Descrp:Descrp,Precio:Precio,Id_Restaurante:Id_Restaurante.id})
+            console.log(res.data)
+            navigete(`/${Id_Restaurante.id}/platos`)
+        }
     }
   return (
     <div>
@@ -32,15 +35,15 @@ const ComCrearRestaurante = () => {
             </div>
             <div className="mb-3">
                 <label className="form-label">Nombre del plato</label>
-                <input required value={Nombre} onChange={(e)=>setNombre(e.target.value)}  type="text" className="form-control"id="Input_Crear_Plato_Nombre"/>
+                <input  value={Nombre} onChange={(e)=>setNombre(e.target.value)}  type="text" className="form-control"id="Input_Crear_Plato_Nombre"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Descripcion de plato</label>
-                <textarea required value={Descrp} onChange={(e)=>setDescrp(e.target.value)} type="text" className="form-control" id="Input_Crear_Plato_Descrip"/>
+                <textarea  value={Descrp} onChange={(e)=>setDescrp(e.target.value)} type="text" className="form-control" id="Input_Crear_Plato_Descrip"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Precio de plato</label>
-                <input required value={Precio}onChange={(e)=>setPrecio(e.target.value)} type="text" className="form-control" id="Input_Crear_Plato_Precio"/>
+                <input  value={Precio}onChange={(e)=>setPrecio(e.target.value)} type="text" className="form-control" id="Input_Crear_Plato_Precio"/>
             </div>
             
             <button type="submit" className="btn btn-primary" id="Btn_Crear_Plato">Crear</button>

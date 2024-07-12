@@ -16,7 +16,7 @@ const Navbar = () => {
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <Link  class="nav-link active" to={'/'}>
-                        Ubicacion
+                        {/* Ubicacion */}
                     </Link>
                 </li>
                 <li class="nav-item">
@@ -29,7 +29,7 @@ const Navbar = () => {
             <div class="d-flex">
                 <span class="navbar-text me-3">
                     <Link id="bnt-Login" to={'/Login'}>
-                        <FontAwesomeIcon icon={faUser} /> Login
+                        <FontAwesomeIcon icon={faUser} />Login
                     </Link>
                 </span>
                 <span class="navbar-text me-3">

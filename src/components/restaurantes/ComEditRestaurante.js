@@ -22,11 +22,15 @@ const ComEditRestaurante = () => {
     const {id}=useParams()
     //proceso para actualizar
     const update=async(e)=>{
-        e.preventDefault()
-        await axios.put(URI+id,{
-            ImgPortada:ImgPortada,ImgLogo:ImgLogo,Nombre:Nombre,Direccion:Direccion,TimEnvio:TimEnvio,PrecEnvio:PrecEnvio,Calificacion:Calificacion,HorApertura:HorApertura,HorCerrar:HorCerrar,Ruc:Ruc,RazonSocial:RazonSocial
-        })
-        navigete('/Login')
+        if(Nombre===""||Direccion===""||Ruc===""||RazonSocial===""){
+            alert('Faltan datos!')
+        }else{
+            e.preventDefault()
+            await axios.put(URI+id,{
+                ImgPortada:ImgPortada,ImgLogo:ImgLogo,Nombre:Nombre,Direccion:Direccion,TimEnvio:TimEnvio,PrecEnvio:PrecEnvio,Calificacion:Calificacion,HorApertura:HorApertura,HorCerrar:HorCerrar,Ruc:Ruc,RazonSocial:RazonSocial
+            })
+            navigete('/Login')
+        }
     }
 
     useEffect(()=>{

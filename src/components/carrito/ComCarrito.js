@@ -100,7 +100,7 @@ export const ComCarrito = () => {
                 </div>
         ))}
         <h3>Total:${calcularTotal()}</h3>
-        {itemOfCarrito.length>0?(<button onClick={()=>Cancelar()}> Cancelar pedido</button>):(<p>Agrege un pedido a tu carrito</p>)}
+        {itemOfCarrito.length>0?(<button onClick={()=>Cancelar()}> Finalizar compra</button>):(<p>Agrege un pedido a tu carrito</p>)}
         
     </div>
   )

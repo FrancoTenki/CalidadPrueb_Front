@@ -1,0 +1,4308 @@
+{
+  "id": "414c9da1-c811-426c-91ed-1d5684f7d611",
+  "version": "2.0",
+  "name": "Delivery",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "3c08fe43-aede-45bc-baf2-24c786cfc9f6",
+    "name": "PD-3-Verificar restaurante y sus platos Consumidor",
+    "commands": [{
+      "id": "0802987a-cc75-4d40-90dc-d64d32426768",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82a8769c-b95e-40b9-a1e9-2fa4f6b18884",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/restaurante')])[2]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55efb961-ba18-4eef-b1f3-543a96112e86",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Card_Restaurante",
+      "targets": [
+        ["id=Card_Restaurante", "id"],
+        ["xpath=//div[@id='Card_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2de24775-fa2d-45b9-a71e-269723e74faa",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Nombre_Restaurante_User",
+      "targets": [
+        ["xpath=//p[@id='Nombre_Restaurante_User']/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Milos Broaster')]", "xpath:innerText"]
+      ],
+      "value": "Milos Broaster"
+    }, {
+      "id": "8fd7eeb2-2a32-41c7-a3f2-4e3c28901051",
+      "comment": "",
+      "command": "click",
+      "target": "id=Card_Restaurante_Link",
+      "targets": [
+        ["id=Card_Restaurante", "id"],
+        ["xpath=//div[@id='Card_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7932cb61-83c3-4b8a-835d-90d6f57c91f9",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=H2_Nombre_Restaurante_Detalle",
+      "targets": [
+        ["id=H2_Nombre_Restaurante_Detalle", "id"],
+        ["xpath=//h2[@id='H2_Nombre_Restaurante_Detalle']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Milos Broaster')]", "xpath:innerText"]
+      ],
+      "value": "Milos Broaster"
+    }, {
+      "id": "1804da0a-a11f-420f-abab-f984d865544b",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=H3_Direccion_Restaurante_Detalle",
+      "targets": [
+        ["id=H3_Direccion_Restaurante_Detalle", "id"],
+        ["css=#H3_Direccion_Restaurante_Detalle", "css:finder"],
+        ["xpath=//h3[@id='H3_Direccion_Restaurante_Detalle']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Av San Martín de Porres 792, Cajamarca 06003, Peru')]", "xpath:innerText"]
+      ],
+      "value": "Av San Martín de Porres 792, Cajamarca 06003, Peru"
+    }, {
+      "id": "b67329a3-8d27-4dbf-8c91-0a0f9f4c8cad",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Tiempo_Envio_Restaurante_Detalle",
+      "targets": [
+        ["id=Tiempo_Envio_Restaurante_Detalle", "id"],
+        ["css=#Tiempo_Envio_Restaurante_Detalle", "css:finder"],
+        ["xpath=//span[@id='Tiempo_Envio_Restaurante_Detalle']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/span[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'20 min')]", "xpath:innerText"]
+      ],
+      "value": "20 min"
+    }, {
+      "id": "a434d4fa-84cb-4fcb-8cf5-afa08ce2ffc1",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Precio_Envio_Restaurante_Detalle",
+      "targets": [
+        ["id=Precio_Envio_Restaurante_Detalle", "id"],
+        ["css=#Precio_Envio_Restaurante_Detalle", "css:finder"],
+        ["xpath=//span[@id='Precio_Envio_Restaurante_Detalle']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'S/ 12.50')]", "xpath:innerText"]
+      ],
+      "value": "S/ 12.50"
+    }, {
+      "id": "23c6b076-8af4-4b7b-a273-9e29166b3444",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Calififcacion_Restaurante_Detalle",
+      "targets": [
+        ["id=Calififcacion_Restaurante_Detalle", "id"],
+        ["css=#Calififcacion_Restaurante_Detalle", "css:finder"],
+        ["xpath=//span[@id='Calififcacion_Restaurante_Detalle']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'4.5')]", "xpath:innerText"]
+      ],
+      "value": "4.5"
+    }, {
+      "id": "fafd1025-5f9e-427a-8a1e-b44d7b435267",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Horario_Restaurante_Detalle",
+      "targets": [
+        ["id=Horario_Restaurante_Detalle", "id"],
+        ["css=#Horario_Restaurante_Detalle", "css:finder"],
+        ["xpath=//span[@id='Horario_Restaurante_Detalle']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div[4]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'09:00:00-18:00:00')]", "xpath:innerText"]
+      ],
+      "value": "04:00 - 13:00"
+    }, {
+      "id": "0aa4819b-ac52-47e1-ad71-6abdfb33d3ac",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Card_Plato",
+      "targets": [
+        ["id=Card_Plato", "id"],
+        ["xpath=//div[@id='Card_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "738aca7f-b4d1-4d2d-873b-fb0fd5a29b05",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=H4_Nombre_plato",
+      "targets": [
+        ["id=H4_Nombre_plato", "id"],
+        ["xpath=//h4[@id='H4_Nombre_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/div/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'6 Mostrialitas Bbq más Gaseosa')]", "xpath:innerText"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "456dd671-2276-41b1-a2ff-2d7f2b1064c3",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=P_Descp_plato",
+      "targets": [
+        ["id=P_Descp_plato", "id"],
+        ["xpath=//p[@id='P_Descp_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'6 Alitas bbq, papas fritas, chaufa, ensalada, cremas más gaseosa pepsi o guaraná de 355 ml.')]", "xpath:innerText"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "f84794d5-3407-4dbc-997d-c342f3caffc8",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Span_Precio_plato",
+      "targets": [
+        ["id=Span_Precio_plato", "id"],
+        ["xpath=//span[@id='Span_Precio_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'S/ 16.90')]", "xpath:innerText"]
+      ],
+      "value": "S/ 15.00"
+    }]
+  }, {
+    "id": "0514e102-d0f3-43c5-b2c0-1e6e7a514b62",
+    "name": "PD-12-El sistema debe permitir a los usuarios proveedores eliminar locales (restaurantes) existentes de la plataforma de delivery.",
+    "commands": [{
+      "id": "d02edf61-f79d-4e35-ba44-bfa2dbb0d08e",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69f925d7-ea8e-43fb-abc3-1887598663e2",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f97d2dad-b708-4e2e-ae3d-2f7d6e1eb5ca",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "4a07ac35-0db8-43c6-9dec-35f2835298f2",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "5d0f51dd-8ce9-443b-b05e-ed2de97727c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60d02f09-760d-4c5e-b3ea-9458c48aeb89",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-crearRestaurante",
+      "targets": [
+        ["id=btn-crearRestaurante", "id"],
+        ["linkText=Crea nuevo restaurante", "linkText"],
+        ["css=#btn-crearRestaurante", "css:finder"],
+        ["xpath=//a[contains(text(),'Crea nuevo restaurante')]", "xpath:link"],
+        ["xpath=//a[@id='btn-crearRestaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante/create')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crea nuevo restaurante')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "343b689e-8009-4e5d-a3d9-0f4b683b07f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputImgPortada",
+      "targets": [
+        ["id=InputImgPortada", "id"],
+        ["css=#InputImgPortada", "css:finder"],
+        ["xpath=//textarea[@id='InputImgPortada']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg"
+    }, {
+      "id": "060271e3-231b-497d-bdb0-8d5c2d7a2612",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputImgLogo",
+      "targets": [
+        ["id=InputImgLogo", "id"],
+        ["css=#InputImgLogo", "css:finder"],
+        ["xpath=//textarea[@id='InputImgLogo']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//div[2]/textarea", "xpath:position"]
+      ],
+      "value": "https://www.wekookmarketing.com/wp-content/uploads/2018/02/logo-restaurante-1-752x501.jpg"
+    }, {
+      "id": "acfa0cc9-1882-475c-b3db-6f12636c6109",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputNombre",
+      "targets": [
+        ["id=InputNombre", "id"],
+        ["css=#InputNombre", "css:finder"],
+        ["xpath=//input[@id='InputNombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Restaurante Prueba"
+    }, {
+      "id": "685b04ea-92ab-4f1c-8be4-a5936c8f6caa",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputDireccion",
+      "targets": [
+        ["id=InputDireccion", "id"],
+        ["css=#InputDireccion", "css:finder"],
+        ["xpath=//input[@id='InputDireccion']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "Direccion prueba"
+    }, {
+      "id": "fe3aa319-b721-46bb-b2e7-83a925f16780",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputTimevio",
+      "targets": [
+        ["id=InputTimevio", "id"],
+        ["css=#InputTimevio", "css:finder"],
+        ["xpath=//input[@id='InputTimevio']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "20"
+    }, {
+      "id": "17badde9-42c6-49e3-a747-22c9b457a7c9",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputPrecEnvio",
+      "targets": [
+        ["id=InputPrecEnvio", "id"],
+        ["css=#InputPrecEnvio", "css:finder"],
+        ["xpath=//input[@id='InputPrecEnvio']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "15.5"
+    }, {
+      "id": "c2c407a3-b7cb-4b2a-952e-0ebe9996072c",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputCalificacion",
+      "targets": [
+        ["id=InputCalificacion", "id"],
+        ["css=#InputCalificacion", "css:finder"],
+        ["xpath=//input[@id='InputCalificacion']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "2.5"
+    }, {
+      "id": "84023f23-68b4-441d-ac3a-8af1aed7fb6e",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputHorApertura",
+      "targets": [
+        ["id=InputHorApertura", "id"],
+        ["css=#InputHorApertura", "css:finder"],
+        ["xpath=//input[@id='InputHorApertura']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "08:00:00"
+    }, {
+      "id": "e975afb6-a6bc-485a-82a1-abaa89481f3c",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputHorCerrar",
+      "targets": [
+        ["id=InputHorCerrar", "id"],
+        ["css=#InputHorCerrar", "css:finder"],
+        ["xpath=//input[@id='InputHorCerrar']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[9]/input", "xpath:idRelative"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "17:00:00"
+    }, {
+      "id": "0e93b3e0-cdff-4f1a-abc1-8079a1ef1266",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputRuc",
+      "targets": [
+        ["id=InputRuc", "id"],
+        ["css=#InputRuc", "css:finder"],
+        ["xpath=//input[@id='InputRuc']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[10]/input", "xpath:idRelative"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": "409763486"
+    }, {
+      "id": "d035ae1e-0f33-4ec3-ba26-55bf159d7b01",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputRazonSocial",
+      "targets": [
+        ["id=InputRazonSocial", "id"],
+        ["css=#InputRazonSocial", "css:finder"],
+        ["xpath=//input[@id='InputRazonSocial']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[11]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/input", "xpath:position"]
+      ],
+      "value": "Arbhol Alex Perez Flores"
+    }, {
+      "id": "f96d2eb2-8c87-403d-8945-b21353f6dc21",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-store",
+      "targets": [
+        ["id=btn-store", "id"],
+        ["css=#btn-store", "css:finder"],
+        ["xpath=//button[@id='btn-store']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b9dacb2-93ce-4ffc-bba5-403e2dd22602",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=(//div[@id='Card_Restaurante_Admin'])[6]",
+      "targets": [
+        ["xpath=(//div[@id='Card_Restaurante_Admin'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30db1db1-59f8-49de-9c3f-ca47eafbf423",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//h5[@id='NombreRest_Admin'])[6]",
+      "targets": [
+        ["xpath=(//h5[@id='NombreRest_Admin'])[5]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Rest_Admin']/h5)[5]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Nombre editado')]", "xpath:innerText"]
+      ],
+      "value": "Restaurante Prueba"
+    }, {
+      "id": "d6c6cc28-bf01-4ffb-81e0-712470171d38",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@id='Btn_Eliminar_Restaurante'])[6]",
+      "targets": [
+        ["xpath=(//button[@id='Btn_Eliminar_Restaurante'])[8]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Restaurante_Admin']/div/div[2]/div/button)[8]", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2139279c-457e-4811-b445-27acb1b70ef1",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52cee26e-f3a9-424a-83a4-a005a43abe60",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "340c3032-aa7f-45b0-9884-f3aae702dc9a",
+    "name": "PD-10-Verificación de creación de platos",
+    "commands": [{
+      "id": "9a5a3e43-ed71-4957-8e84-88de3e5b94aa",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed03055b-97af-4ae1-8c8f-aec815230c56",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26dd0ad2-7690-4e05-a8cb-9de2ab125c80",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "72ab466e-e9a3-4683-985f-1b90e779a286",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "6dc3b462-0c0c-492b-8cd3-26627b607b52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca525506-3344-475b-b3f9-d422edfb1921",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_VerPlatos_Restaurante",
+      "targets": [
+        ["id=Btn_VerPlatos_Restaurante", "id"],
+        ["linkText=Ver los platos", "linkText"],
+        ["xpath=//a[contains(text(),'Ver los platos')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_VerPlatos_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Restaurante_Admin']/div/div[2]/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/1/platos')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver los platos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c1bea53-1efd-48cb-88a7-52c18f9d7614",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Crear_Plato",
+      "targets": [
+        ["id=Btn_Crear_Plato", "id"],
+        ["linkText=Crea nuevo plato", "linkText"],
+        ["css=#Btn_Crear_Plato", "css:finder"],
+        ["xpath=//a[contains(text(),'Crea nuevo plato')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Crear_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/platos/create/1/newplato')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crea nuevo plato')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee484166-9adb-4f82-b996-3bd9317c1f50",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Nombre",
+      "targets": [
+        ["id=Input_Crear_Plato_Nombre", "id"],
+        ["css=#Input_Crear_Plato_Nombre", "css:finder"],
+        ["xpath=//input[@id='Input_Crear_Plato_Nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "546e867f-bc78-4dde-856c-d7919a223256",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Descrip",
+      "targets": [
+        ["id=Input_Crear_Plato_Descrip", "id"],
+        ["css=#Input_Crear_Plato_Descrip", "css:finder"],
+        ["xpath=//textarea[@id='Input_Crear_Plato_Descrip']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/textarea", "xpath:idRelative"],
+        ["xpath=//div[3]/textarea", "xpath:position"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "4ca662fa-9a73-4824-9d97-a5687e266d05",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Precio",
+      "targets": [
+        ["id=Input_Crear_Plato_Precio", "id"],
+        ["css=#Input_Crear_Plato_Precio", "css:finder"],
+        ["xpath=//input[@id='Input_Crear_Plato_Precio']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "15.0"
+    }, {
+      "id": "8d5db867-d6e2-43d0-bd60-a8bb5781d32e",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Crear_Plato",
+      "targets": [
+        ["id=Btn_Crear_Plato", "id"],
+        ["css=#Btn_Crear_Plato", "css:finder"],
+        ["xpath=//button[@id='Btn_Crear_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6499c5c-3f1e-4750-a6ed-134fdffa2c6a",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//h5[@id='H5_Plato_Admin_Nombre'])[3]",
+      "targets": [
+        ["xpath=(//h5[@id='H5_Plato_Admin_Nombre'])[3]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Plato_Admin']/div/div[2]/div/h5)[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Nombre de prueba')]", "xpath:innerText"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "5caab6b7-75d5-42cb-8ca5-db80c53e2277",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[@id='H5_Plato_Admin_Dexrip'])[3]",
+      "targets": [
+        ["xpath=(//p[@id='H5_Plato_Admin_Dexrip'])[3]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Plato_Admin']/div/div[2]/div/p)[5]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Nombre de prueba')]", "xpath:innerText"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "35e2cea9-a403-4232-b690-57765ba81572",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@id='Btn_Eliminar_Plato'])[3]",
+      "targets": [
+        ["xpath=(//button[@id='Btn_Eliminar_Plato'])[3]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Plato_Admin']/div/div[2]/div/button)[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ced791c5-80c0-4138-801f-6c68ccd22e01",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "836da090-82aa-4490-b69c-60fdc2c765a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "99f23533-17be-4ae1-af3d-f48989beba54",
+    "name": "PD-1-Verificar listado de restaurante",
+    "commands": [{
+      "id": "35e9fe72-e6c0-4554-824d-37f4210a75b9",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c18e54c8-5c71-42e7-8b06-bcd1f2c7bc7f",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/restaurante')])[2]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2914aaf4-5c7a-42a2-9fd7-c0c26c8745ee",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Card_Restaurante",
+      "targets": [
+        ["id=Card_Restaurante", "id"],
+        ["xpath=//div[@id='Card_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eae712cc-5db4-4b32-aa37-06d65c31ec51",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Nombre_Restaurante_User",
+      "targets": [
+        ["xpath=//p[@id='Nombre_Restaurante_User']/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Milos Broaster')]", "xpath:innerText"]
+      ],
+      "value": "Milos Broaster"
+    }]
+  }, {
+    "id": "e2505e25-6619-44ad-9c61-56cbc0c350a1",
+    "name": "PD-2-Verificar detalle del plato",
+    "commands": [{
+      "id": "8382f682-02ce-431f-8d15-18080cd88688",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7135224-34bf-4b50-b921-aba1708ca5d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/restaurante')])[2]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a1237d3-2508-48a7-b554-675fcf93c1ff",
+      "comment": "",
+      "command": "click",
+      "target": "id=Card_Restaurante_Link",
+      "targets": [
+        ["id=Card_Restaurante", "id"],
+        ["xpath=//div[@id='Card_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d7cb933-1eeb-4a98-8744-b90b6251b8a1",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Card_Plato",
+      "targets": [
+        ["id=Card_Plato", "id"],
+        ["xpath=//div[@id='Card_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8209483-878b-4a78-9532-6a938aa42177",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=H4_Nombre_plato",
+      "targets": [
+        ["id=H4_Nombre_plato", "id"],
+        ["xpath=//h4[@id='H4_Nombre_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/div/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Mostrito 1/8 más Gaseosa')]", "xpath:innerText"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "b85b3f0a-5854-4021-a480-f27692c2c206",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=P_Descp_plato",
+      "targets": [
+        ["id=P_Descp_plato", "id"],
+        ["xpath=//p[@id='P_Descp_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Mostrito 1/8 más Gaseosa')]", "xpath:innerText"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "e7891dbf-db8a-4cf8-b22b-6686482e042d",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Span_Precio_plato",
+      "targets": [
+        ["id=Span_Precio_plato", "id"],
+        ["xpath=//span[@id='Span_Precio_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'S/ 15.00')]", "xpath:innerText"]
+      ],
+      "value": "S/ 15.00"
+    }]
+  }, {
+    "id": "13d64ee3-b97c-4ee4-8506-fb9b1fabe827",
+    "name": "PD-7-Verificar la funcionalidad de edición de un plato en el menú del restaurante",
+    "commands": [{
+      "id": "06259775-7dc8-4752-909b-a2a34c904c3d",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b2a7b97-788a-454b-9b4d-e4b42c5c3d99",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67602eda-873c-4327-9616-416f18b26932",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "b5a4945e-94e1-418f-b19e-ab09ee13c94c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "8d15a3de-11cc-4c32-9d60-59568f98c1d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "942ba67d-5161-4a94-b511-f5ea2b1dc530",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_VerPlatos_Restaurante",
+      "targets": [
+        ["id=Btn_VerPlatos_Restaurante", "id"],
+        ["linkText=Ver los platos", "linkText"],
+        ["xpath=//a[contains(text(),'Ver los platos')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_VerPlatos_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Restaurante_Admin']/div/div[2]/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/1/platos')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver los platos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e88756a4-4337-4a65-9e6f-b4e66b19c479",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Editar_Plato",
+      "targets": [
+        ["id=Btn_Editar_Plato", "id"],
+        ["linkText=Editar", "linkText"],
+        ["xpath=//a[contains(text(),'Editar')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Editar_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato_Admin']/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/platos/edit/36/1')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d10736ef-9007-4b72-bb8b-9a8e43635aca",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputNombre",
+      "targets": [
+        ["id=InputNombre", "id"],
+        ["css=#InputNombre", "css:finder"],
+        ["xpath=//input[@id='InputNombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Nombre editado"
+    }, {
+      "id": "3327aab3-5926-4208-8f5b-8c4f88340ab6",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputDescp",
+      "targets": [
+        ["id=InputDescp", "id"],
+        ["css=#InputDescp", "css:finder"],
+        ["xpath=//input[@id='InputDescp']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Descripcion editada"
+    }, {
+      "id": "4932d3f4-460b-411f-a259-86f87939c337",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn-edit",
+      "targets": [
+        ["id=Btn-edit", "id"],
+        ["css=#Btn-edit", "css:finder"],
+        ["xpath=//button[@id='Btn-edit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2379d22-a243-4766-8bc4-47cc5b8a36e9",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=H5_Plato_Admin_Nombre",
+      "targets": [
+        ["id=H5_Plato_Admin_Nombre", "id"],
+        ["xpath=//h5[@id='H5_Plato_Admin_Nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato_Admin']/div/div[2]/div/h5", "xpath:idRelative"],
+        ["xpath=//h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Mostrito 1/8 más Gaseosa')]", "xpath:innerText"]
+      ],
+      "value": "Nombre editado"
+    }, {
+      "id": "e79eddf5-814f-4e65-8e43-c0f6e9afab46",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=H5_Plato_Admin_Dexrip",
+      "targets": [
+        ["id=H5_Plato_Admin_Dexrip", "id"],
+        ["xpath=//p[@id='H5_Plato_Admin_Dexrip']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato_Admin']/div/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Mostrito 1/8 más Gaseosa')]", "xpath:innerText"]
+      ],
+      "value": "Descripcion editada"
+    }, {
+      "id": "8d32a9b9-1792-47f5-b906-dec39aea756b",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Editar_Plato",
+      "targets": [
+        ["id=Btn_Editar_Plato", "id"],
+        ["linkText=Editar", "linkText"],
+        ["xpath=//a[contains(text(),'Editar')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Editar_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato_Admin']/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/platos/edit/36/1')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4ee6678-0f56-4197-8429-8aafe4d91e7d",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputNombre",
+      "targets": [
+        ["id=InputDescp", "id"],
+        ["css=#InputDescp", "css:finder"],
+        ["xpath=//input[@id='InputDescp']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "dc38cf07-2c40-47a8-8abc-eb47ed2f43ca",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputDescp",
+      "targets": [],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "89f1745e-60c6-4fb1-a7f5-6ea141d48483",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn-edit",
+      "targets": [
+        ["id=Btn-edit", "id"],
+        ["css=#Btn-edit", "css:finder"],
+        ["xpath=//button[@id='Btn-edit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "169338b3-08a1-4f32-b3ea-f3b6fb0ad74e",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e7df1cf-6216-496d-a736-dc5e6dad9d71",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bb6e0271-4258-4295-8e18-78279a44513f",
+    "name": "PD-9-Permitir a los usuarios proveedores de restaurantes eliminar platos existentes de sus menús.",
+    "commands": [{
+      "id": "60b3d363-b50f-4d3c-b392-cd3e0eebff4c",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c460a84d-9c6b-4f09-abdb-656ac5e7a964",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e8d9c14-55aa-48de-a24e-e1f9ce4fcc11",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "b21c640a-3413-4cdb-9e5a-bd43a39364d1",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "303fb78d-ee54-47f6-83a7-7241d85e9bd3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0cd96c6-0f37-418c-9f68-9fa41d9234b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_VerPlatos_Restaurante",
+      "targets": [
+        ["id=Btn_VerPlatos_Restaurante", "id"],
+        ["linkText=Ver los platos", "linkText"],
+        ["xpath=//a[contains(text(),'Ver los platos')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_VerPlatos_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Restaurante_Admin']/div/div[2]/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/1/platos')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver los platos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "411536b2-8c89-4874-9bd5-e6aa3ab82ffa",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Crear_Plato",
+      "targets": [
+        ["id=Btn_Crear_Plato", "id"],
+        ["linkText=Crea nuevo plato", "linkText"],
+        ["css=#Btn_Crear_Plato", "css:finder"],
+        ["xpath=//a[contains(text(),'Crea nuevo plato')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Crear_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/platos/create/1/newplato')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crea nuevo plato')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5103c9dc-9199-48bb-a793-7ff1b0d14d03",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Nombre",
+      "targets": [
+        ["id=Input_Crear_Plato_Nombre", "id"],
+        ["css=#Input_Crear_Plato_Nombre", "css:finder"],
+        ["xpath=//input[@id='Input_Crear_Plato_Nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "0bf3710a-60db-48c0-8e6d-5780ad3c7477",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Descrip",
+      "targets": [
+        ["id=Input_Crear_Plato_Descrip", "id"],
+        ["css=#Input_Crear_Plato_Descrip", "css:finder"],
+        ["xpath=//textarea[@id='Input_Crear_Plato_Descrip']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/textarea", "xpath:idRelative"],
+        ["xpath=//div[3]/textarea", "xpath:position"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "7224dc4e-5ce2-4320-816a-a213fa6a6044",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Precio",
+      "targets": [
+        ["id=Input_Crear_Plato_Precio", "id"],
+        ["css=#Input_Crear_Plato_Precio", "css:finder"],
+        ["xpath=//input[@id='Input_Crear_Plato_Precio']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "15.0"
+    }, {
+      "id": "7d95f06f-1e44-4bea-b8fa-0927e63cb4f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Crear_Plato",
+      "targets": [
+        ["id=Btn_Crear_Plato", "id"],
+        ["css=#Btn_Crear_Plato", "css:finder"],
+        ["xpath=//button[@id='Btn_Crear_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "716427eb-3f7b-43e9-b24a-f8e6c3d116a3",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//h5[@id='H5_Plato_Admin_Nombre'])[3]",
+      "targets": [
+        ["xpath=(//h5[@id='H5_Plato_Admin_Nombre'])[3]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Plato_Admin']/div/div[2]/div/h5)[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Nombre de prueba')]", "xpath:innerText"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "73405b01-3086-4cfd-b536-65f6a6226b41",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[@id='H5_Plato_Admin_Dexrip'])[3]",
+      "targets": [
+        ["xpath=(//p[@id='H5_Plato_Admin_Dexrip'])[3]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Plato_Admin']/div/div[2]/div/p)[5]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Nombre de prueba')]", "xpath:innerText"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "66752754-3c33-4014-980f-889c9a2d4542",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@id='Btn_Eliminar_Plato'])[3]",
+      "targets": [
+        ["xpath=(//button[@id='Btn_Eliminar_Plato'])[3]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Plato_Admin']/div/div[2]/div/button)[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71e301dd-08a5-4dbc-aa68-38c577a5d46a",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "xpath=(//div[@id='Card_Plato_Admin'])[3]",
+      "targets": [
+        ["xpath=(//div[@id='Card_Plato_Admin'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "0f8cf5f1-3829-472d-9f0b-caed2d3c9ca9",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c406219-ebc0-4b31-aef4-bd73086ce457",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "321c3b22-0591-47fd-9646-104a57762e56",
+    "name": "PD-11-El sistema debe permitir a los administradores modificar la información de los locales existentes en la plataforma de delivery.",
+    "commands": [{
+      "id": "c1b2d3ca-9fdf-4684-9fd8-77297def0a39",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56996f8b-9d87-40ac-a103-1b066df4b1a5",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8453f4bf-89b8-4ad7-96ae-4b5fb75b0ab3",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "6893898f-86f0-47eb-a0f9-ae888bd13eeb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "842e1641-d64a-4ec7-b285-fa3e4fa58b0c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f319e64-15b7-492c-a362-f049bf33e1c8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[contains(text(),'Editar')])[5]",
+      "targets": [
+        ["xpath=(//a[contains(text(),'Editar')])[5]", "xpath:link"],
+        ["xpath=(//a[@id='Link_Editar_Restaurante'])[5]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Rest_Admin']/a)[13]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante/edit/13')]", "xpath:href"],
+        ["xpath=//div[5]/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1639ade-a627-4e7f-99b6-23d542b3466e",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputNombre",
+      "targets": [
+        ["id=InputNombre", "id"],
+        ["css=#InputNombre", "css:finder"],
+        ["xpath=//input[@id='InputNombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Nombre editado"
+    }, {
+      "id": "bebdfaf6-41f8-449e-975f-56f28021f012",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputDireccion",
+      "targets": [
+        ["id=InputDireccion", "id"],
+        ["css=#InputDireccion", "css:finder"],
+        ["xpath=//input[@id='InputDireccion']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "Direccion editada"
+    }, {
+      "id": "c18b4fa2-1993-42ab-a517-bc3f327313b6",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn-edit",
+      "targets": [
+        ["id=Btn-edit", "id"],
+        ["css=#Btn-edit", "css:finder"],
+        ["xpath=//button[@id='Btn-edit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "285a3c33-1c06-4f55-8ced-ede723c7d934",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=(//div[@id='Card_Restaurante_Admin'])[5]",
+      "targets": [
+        ["xpath=(//div[@id='Card_Restaurante_Admin'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "021210f7-2a47-455b-85de-246932831a40",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[contains(text(),'Editar')])[5]",
+      "targets": [
+        ["xpath=(//a[contains(text(),'Editar')])[5]", "xpath:link"],
+        ["xpath=(//a[@id='Link_Editar_Restaurante'])[5]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Rest_Admin']/a)[13]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante/edit/13')]", "xpath:href"],
+        ["xpath=//div[5]/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0bb5c34-d967-49b4-b3b7-c1ced88a4780",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputDireccion",
+      "targets": [
+        ["id=InputDireccion", "id"],
+        ["css=#InputDireccion", "css:finder"],
+        ["xpath=//input[@id='InputDireccion']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1cbb332c-4c21-4018-af20-d50b60bfbd67",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputNombre",
+      "targets": [
+        ["id=InputNombre", "id"],
+        ["css=#InputNombre", "css:finder"],
+        ["xpath=//input[@id='InputNombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Familia rio"
+    }, {
+      "id": "a9574b04-1385-4994-a684-fc50731de175",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47b843e8-bac2-4088-94e4-dbe3302b297c",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "38891cbe-8472-4c92-9b1c-2963c7d4ee62",
+    "name": "PD-14-Los proveedores podrán acceder a una página dedicada para gestionar su información y productos.",
+    "commands": [{
+      "id": "42b4b91f-63ca-4710-9a51-a51c667879a7",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c9b8dd9-49f7-4f7b-a2c4-84de5627625c",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f6240fc-d021-4f36-b64a-c2ad9e112af3",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "56adc5a7-af05-4f77-92d3-17eb1629acdd",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "85c4545b-3d89-401a-aa7e-aad2d8b25de3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "114eed42-2a93-4661-95e4-c26921360d59",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Card_Restaurante_Admin",
+      "targets": [
+        ["id=Card_Restaurante_Admin", "id"],
+        ["xpath=//div[@id='Card_Restaurante_Admin']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d750d4e3-70fb-420a-aa98-fbf0490daefb",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=btn-crearRestaurante",
+      "targets": [
+        ["id=btn-crearRestaurante", "id"],
+        ["linkText=Crea nuevo restaurante", "linkText"],
+        ["css=#btn-crearRestaurante", "css:finder"],
+        ["xpath=//a[contains(text(),'Crea nuevo restaurante')]", "xpath:link"],
+        ["xpath=//a[@id='btn-crearRestaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante/create')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crea nuevo restaurante')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42fab985-f97d-49b0-9191-8242e0f19775",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Link_Editar_Restaurante",
+      "targets": [
+        ["id=Link_Editar_Restaurante", "id"],
+        ["linkText=Editar", "linkText"],
+        ["xpath=//a[contains(text(),'Editar')]", "xpath:link"],
+        ["xpath=//a[@id='Link_Editar_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Rest_Admin']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante/edit/1')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4b334ce-f59d-48c4-b9d5-f096d9e13587",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Btn_Eliminar_Restaurante",
+      "targets": [
+        ["id=Btn_Eliminar_Restaurante", "id"],
+        ["xpath=//button[@id='Btn_Eliminar_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Rest_Admin']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Elimnar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a42364d1-ce1d-49ed-8557-1b4a80cc62c7",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Btn_VerPlatos_Restaurante",
+      "targets": [
+        ["id=Btn_VerPlatos_Restaurante", "id"],
+        ["linkText=Ver los platos", "linkText"],
+        ["xpath=//a[contains(text(),'Ver los platos')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_VerPlatos_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Rest_Admin']/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/1/platos')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver los platos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f3dffca-ca99-4634-8f7d-edc6b7b3c7b8",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Btn_Pedidos_Restaurante",
+      "targets": [
+        ["id=Btn_Pedidos_Restaurante", "id"],
+        ["linkText=Ver pedidos", "linkText"],
+        ["xpath=//a[contains(text(),'Ver pedidos')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Pedidos_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Rest_Admin']/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/1/pedidos')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver pedidos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab1f60c6-cb8b-4db8-b8a6-e38bf4c18c37",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e967f2ec-1831-49ef-860a-cc45fac96f14",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bd5b4713-5753-4e86-a868-bc7513d22bd7",
+    "name": "PD-15-Verificar el listado de restaurantes y datos y platos de este cuando se haya iniciado sesión",
+    "commands": [{
+      "id": "30bcb2e7-3d4b-439e-a4fc-91196da744d3",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d48a8382-7788-4117-aedf-4abe4ea491c5",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a266ed6d-f480-4726-a53c-3803b6d4ab63",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "franco"
+    }, {
+      "id": "e906e84b-54a9-4be5-a26e-ed66d8a7c8a4",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "19093c6e-93ad-4fc8-be4a-fa194ce6ed8d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79bb55b4-5d72-4f8a-a887-67a54f72e494",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-brand",
+      "targets": [
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Navbar')]", "xpath:link"],
+        ["xpath=//nav[@id='Navbar']/div/a/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0830038-0147-49b3-8560-a5eb124eb440",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09011d1c-922e-4b06-b951-f0981d1111a9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Card_Restaurante",
+      "targets": [
+        ["id=Card_Restaurante", "id"],
+        ["xpath=//div[@id='Card_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a6e744f-4dd0-48bb-a770-d4e1b0c400ee",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]",
+      "targets": [
+        ["xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='Card_Restaurante_Link']/div/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ef419b2-c49b-4e0b-b469-eb0a6b48f8ee",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Card_Plato",
+      "targets": [
+        ["id=Card_Plato", "id"],
+        ["xpath=//div[@id='Card_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b02a7cd6-80c5-452e-914f-f0091c42575d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.DetalleEnvio",
+      "targets": [
+        ["css=.DetalleEnvio", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29b9c2cd-509a-48ab-9b35-f96261e26eab",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebaed7d6-4895-4a6d-8564-72c9dee9b456",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3f025abe-51d2-4321-892d-ab15af535c63",
+    "name": "PD-16-Verificar la creación de un restaurante sin la necesidad de todos los datos",
+    "commands": [{
+      "id": "ff0115ec-f4b9-4778-af0c-6ba313e2e8ea",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36e2b5db-5e92-4f49-852c-47f9cf55929a",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "250899da-f414-4578-97cf-7a8ab8bb29f9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "b753f466-5db2-4ff5-93c2-b288b2278d3f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "f07a3489-fecf-4052-801c-9a5d05eb5751",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84df9f42-98b1-4a9c-be6b-9890665a29f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-crearRestaurante",
+      "targets": [
+        ["id=btn-crearRestaurante", "id"],
+        ["linkText=Crea nuevo restaurante", "linkText"],
+        ["css=#btn-crearRestaurante", "css:finder"],
+        ["xpath=//a[contains(text(),'Crea nuevo restaurante')]", "xpath:link"],
+        ["xpath=//a[@id='btn-crearRestaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante/create')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crea nuevo restaurante')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b94a2ea-16b5-4d0a-baba-f0b72fa68bdd",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputNombre",
+      "targets": [
+        ["id=InputNombre", "id"],
+        ["css=#InputNombre", "css:finder"],
+        ["xpath=//input[@id='InputNombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Nombre nuevo"
+    }, {
+      "id": "ff3c077a-1162-4a77-a660-5e978fd90f23",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputDireccion",
+      "targets": [
+        ["id=InputDireccion", "id"],
+        ["css=#InputDireccion", "css:finder"],
+        ["xpath=//input[@id='InputDireccion']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "Nombre nuevo"
+    }, {
+      "id": "85288fee-2e9f-4d37-97c1-294e64986ebb",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputRuc",
+      "targets": [
+        ["id=InputRuc", "id"],
+        ["css=#InputRuc", "css:finder"],
+        ["xpath=//input[@id='InputRuc']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[10]/input", "xpath:idRelative"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": "1040976348"
+    }, {
+      "id": "fbbef69c-2d99-4282-8f44-677136a1f8c3",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputRazonSocial",
+      "targets": [
+        ["id=InputRazonSocial", "id"],
+        ["css=#InputRazonSocial", "css:finder"],
+        ["xpath=//input[@id='InputRazonSocial']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[11]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/input", "xpath:position"]
+      ],
+      "value": "Nombre nuevo"
+    }, {
+      "id": "b0cfa86c-0dc5-43ed-b96d-27a934388785",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-store",
+      "targets": [
+        ["id=btn-store", "id"],
+        ["css=#btn-store", "css:finder"],
+        ["xpath=//button[@id='btn-store']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63695615-ec32-4139-bfb3-b73c0f8a5b99",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=(//div[@id='Card_Restaurante_Admin'])[6]",
+      "targets": [
+        ["xpath=(//div[@id='Card_Restaurante_Admin'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div[6]", "xpath:idRelative"],
+        ["xpath=//div[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb45747d-e9d6-4288-b206-a36cc8823052",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9c33ac2-248c-4847-9e68-7ccf62a428b8",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ca935250-e793-49f7-a17c-50b3c3ce9b37",
+    "name": "PD-17-Verificar que no se cree un restaurante sin tener los datos necesarios",
+    "commands": [{
+      "id": "0c06a27e-9688-4b98-8508-b5aebb58b49e",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5ee37b9-58a1-4d61-9da0-87a2e0c057b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "499abc7d-d8f7-4c0e-85a0-dfaca5ed01e0",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "710b825d-b830-48c9-aab7-8f503a02635e",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "9fffa36a-cb91-4061-9c5e-480a65c966b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f33aa4ba-a04e-4f34-b4b8-a47ed063bd49",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-crearRestaurante",
+      "targets": [
+        ["id=btn-crearRestaurante", "id"],
+        ["linkText=Crea nuevo restaurante", "linkText"],
+        ["css=#btn-crearRestaurante", "css:finder"],
+        ["xpath=//a[contains(text(),'Crea nuevo restaurante')]", "xpath:link"],
+        ["xpath=//a[@id='btn-crearRestaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante/create')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crea nuevo restaurante')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25033f1d-4963-4349-95bd-da0149cba711",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputNombre",
+      "targets": [
+        ["id=InputNombre", "id"],
+        ["css=#InputNombre", "css:finder"],
+        ["xpath=//input[@id='InputNombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Nombre nuevo"
+    }, {
+      "id": "e7aa0dd8-a65e-4418-8f15-10637ce7b0d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputDireccion",
+      "targets": [
+        ["id=InputDireccion", "id"],
+        ["css=#InputDireccion", "css:finder"],
+        ["xpath=//input[@id='InputDireccion']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "Nombre nuevo"
+    }, {
+      "id": "668eef25-0be5-486c-af10-e97da3705542",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputRuc",
+      "targets": [
+        ["id=InputRuc", "id"],
+        ["css=#InputRuc", "css:finder"],
+        ["xpath=//input[@id='InputRuc']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[10]/input", "xpath:idRelative"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": "1040976348"
+    }, {
+      "id": "cf5bf30e-9ea8-4455-af03-c19a9678f212",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-store",
+      "targets": [
+        ["id=btn-store", "id"],
+        ["css=#btn-store", "css:finder"],
+        ["xpath=//button[@id='btn-store']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a89c8313-8b64-4363-98ec-f7283c135868",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "xpath=(//div[@id='Card_Restaurante_Admin'])[6]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bd4acb0-d3cf-4e1c-94b0-47dc015c91a9",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53c0dd13-e0c6-46ba-af2a-6c5e99f730cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "cb815164-a050-4665-8bf5-62ad54cbecc0",
+    "name": "PD-18-Verificar la eliminación de platos de un restaurante cuando elimino un restaurante-local",
+    "commands": [{
+      "id": "24f39cb0-5629-4936-942e-1b617a62be03",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0df2a5db-b8e8-41ff-bda2-56046ece01b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69fc43fb-e4c9-41db-8e3e-fd4ed8ed3847",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "5d56dd42-50f4-42f4-87c0-b6045c80970b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "014ccfe6-ae44-4c1a-80c0-5b36c0872fa9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e81ecfec-e308-4fc1-a332-c1fe39555996",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-crearRestaurante",
+      "targets": [
+        ["id=btn-crearRestaurante", "id"],
+        ["linkText=Crea nuevo restaurante", "linkText"],
+        ["css=#btn-crearRestaurante", "css:finder"],
+        ["xpath=//a[contains(text(),'Crea nuevo restaurante')]", "xpath:link"],
+        ["xpath=//a[@id='btn-crearRestaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante/create')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crea nuevo restaurante')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "134bd6fb-e8b4-4c14-9ff0-b8f24ca5796d",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputNombre",
+      "targets": [
+        ["id=InputNombre", "id"],
+        ["css=#InputNombre", "css:finder"],
+        ["xpath=//input[@id='InputNombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Nombre nuevo"
+    }, {
+      "id": "01234bab-f3fe-42a5-8efa-5698f2a5530d",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputDireccion",
+      "targets": [
+        ["id=InputDireccion", "id"],
+        ["css=#InputDireccion", "css:finder"],
+        ["xpath=//input[@id='InputDireccion']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "Nombre nuevo"
+    }, {
+      "id": "8b0152cc-4f69-4da8-91cd-ac5718f0042a",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputRuc",
+      "targets": [
+        ["id=InputRuc", "id"],
+        ["css=#InputRuc", "css:finder"],
+        ["xpath=//input[@id='InputRuc']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[10]/input", "xpath:idRelative"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": "1040976348"
+    }, {
+      "id": "598d83af-1ab0-49d9-9db8-833dbdd59059",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputRazonSocial",
+      "targets": [
+        ["id=InputRazonSocial", "id"],
+        ["css=#InputRazonSocial", "css:finder"],
+        ["xpath=//input[@id='InputRazonSocial']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[11]/input", "xpath:idRelative"],
+        ["xpath=//div[11]/input", "xpath:position"]
+      ],
+      "value": "Nombre nuevo"
+    }, {
+      "id": "0228f0a5-4912-424e-8ef5-35e8b7963415",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-store",
+      "targets": [
+        ["id=btn-store", "id"],
+        ["css=#btn-store", "css:finder"],
+        ["xpath=//button[@id='btn-store']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8314192b-8335-4ac0-8f4b-d7021497cc6a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[contains(text(),'Ver los platos')])[6]",
+      "targets": [
+        ["xpath=(//a[contains(text(),'Ver los platos')])[6]", "xpath:link"],
+        ["xpath=(//a[@id='Btn_VerPlatos_Restaurante'])[6]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Rest_Admin']/a[2])[6]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/39/platos')]", "xpath:href"],
+        ["xpath=//div[6]/div/div[2]/div/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efe492eb-c7dc-4471-aa83-ac46306826a4",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Crear_Plato",
+      "targets": [
+        ["id=Btn_Crear_Plato", "id"],
+        ["linkText=Crea nuevo plato", "linkText"],
+        ["css=#Btn_Crear_Plato", "css:finder"],
+        ["xpath=//a[contains(text(),'Crea nuevo plato')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Crear_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/platos/create/40/newplato')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crea nuevo plato')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdab7012-f3d4-40e2-b7cc-943ac07e8ec7",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Nombre",
+      "targets": [
+        ["id=Input_Crear_Plato_Nombre", "id"],
+        ["css=#Input_Crear_Plato_Nombre", "css:finder"],
+        ["xpath=//input[@id='Input_Crear_Plato_Nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "5236163b-39b9-4e1f-9115-2bc2ecc7ea70",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Descrip",
+      "targets": [
+        ["id=Input_Crear_Plato_Descrip", "id"],
+        ["css=#Input_Crear_Plato_Descrip", "css:finder"],
+        ["xpath=//textarea[@id='Input_Crear_Plato_Descrip']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/textarea", "xpath:idRelative"],
+        ["xpath=//div[3]/textarea", "xpath:position"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "bff696e7-fc1c-417c-826c-1a743452cdb8",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Precio",
+      "targets": [
+        ["id=Input_Crear_Plato_Precio", "id"],
+        ["css=#Input_Crear_Plato_Precio", "css:finder"],
+        ["xpath=//input[@id='Input_Crear_Plato_Precio']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "15.0"
+    }, {
+      "id": "96c45a21-276e-413c-8928-4559bc58605a",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Crear_Plato",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "076f0833-5d48-4758-bf35-0b8b27b3ee35",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "472289a2-eac0-4865-9d5b-52103ae70bb2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@id='Btn_Eliminar_Restaurante'])[6]",
+      "targets": [
+        ["xpath=(//button[@id='Btn_Eliminar_Restaurante'])[6]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Rest_Admin']/button)[6]", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edc2d9c3-ceff-40e3-b795-9f67ba703687",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=(//button[@id='Btn_Eliminar_Restaurante'])[6]",
+      "targets": [
+        ["xpath=(//button[@id='Btn_Eliminar_Restaurante'])[6]", "xpath:attributes"],
+        ["xpath=(//div[@id='Card_Rest_Admin']/button)[6]", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49abd77e-7f19-4990-9c97-a28aefd63a4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "185d0f37-bd34-4f06-beea-7a40cfbf2916",
+    "name": "PD-20-Verificar que no se cree un plato sin los datos obligatorios",
+    "commands": [{
+      "id": "47815ae0-9b42-4844-bc56-21d18d0a456e",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "407d234f-337d-47e9-82a4-dafa085b279c",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc3893db-2c07-46ff-bcff-cef0ce9af6ea",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "6448e016-33a8-4047-a2ab-37f8638e073f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "13a0f250-bd7e-4810-af7b-36b434c96f29",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07603fcb-d42c-4775-b084-3a8a5b0cbb21",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_VerPlatos_Restaurante",
+      "targets": [
+        ["id=Btn_VerPlatos_Restaurante", "id"],
+        ["linkText=Ver los platos", "linkText"],
+        ["xpath=//a[contains(text(),'Ver los platos')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_VerPlatos_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Restaurante_Admin']/div/div[2]/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/1/platos')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver los platos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80a50ff5-6567-4549-95b6-46af4648ca02",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Crear_Plato",
+      "targets": [
+        ["id=Btn_Crear_Plato", "id"],
+        ["linkText=Crea nuevo plato", "linkText"],
+        ["css=#Btn_Crear_Plato", "css:finder"],
+        ["xpath=//a[contains(text(),'Crea nuevo plato')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Crear_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/platos/create/1/newplato')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crea nuevo plato')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e60d0c53-fa29-4f9d-b8fc-b637aa948299",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Nombre",
+      "targets": [
+        ["id=Input_Crear_Plato_Nombre", "id"],
+        ["css=#Input_Crear_Plato_Nombre", "css:finder"],
+        ["xpath=//input[@id='Input_Crear_Plato_Nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "06f9334a-3a01-43a6-af35-0898b23f3bac",
+      "comment": "",
+      "command": "//type",
+      "target": "id=Input_Crear_Plato_Descrip",
+      "targets": [],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "4f92179f-5cad-4875-b904-1bc56e4fd5f4",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Crear_Plato_Precio",
+      "targets": [
+        ["id=Input_Crear_Plato_Precio", "id"],
+        ["css=#Input_Crear_Plato_Precio", "css:finder"],
+        ["xpath=//input[@id='Input_Crear_Plato_Precio']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "15.0"
+    }, {
+      "id": "a8c4127b-e272-454b-b5ca-d41905e8e0e2",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Crear_Plato",
+      "targets": [
+        ["id=Btn_Crear_Plato", "id"],
+        ["css=#Btn_Crear_Plato", "css:finder"],
+        ["xpath=//button[@id='Btn_Crear_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba757665-e445-4ee7-a927-c8ef3942e02e",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "xpath=(//div[@id='Card_Plato_Admin'])[3]",
+      "targets": [
+        ["xpath=(//div[@id='Card_Plato_Admin'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76f54f91-8bba-4fcb-9480-a68dad82fae5",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "775664c3-f6fc-4ba0-95a4-54c5b57ceac0",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4cf1b8bc-514e-48d5-aeb5-cfc4c74a266b",
+    "name": "PD-21-Verificar la edición de un plato si mando valores vacios en la img del plato",
+    "commands": [{
+      "id": "9cdfd910-1f3f-4fd9-a8c2-308dbc044784",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e2ef184-3294-4bd6-a19b-1934b8c3c974",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50d50a7e-ddf9-4641-9f02-88b539adf214",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "aeadd802-27fe-4aa0-859d-ecfbe40196f4",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "d804056f-00c7-453a-af50-146f714eb869",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16ad4350-97d2-449e-bd62-df70d7ef8330",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_VerPlatos_Restaurante",
+      "targets": [
+        ["id=Btn_VerPlatos_Restaurante", "id"],
+        ["linkText=Ver los platos", "linkText"],
+        ["xpath=//a[contains(text(),'Ver los platos')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_VerPlatos_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Restaurante_Admin']/div/div[2]/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/1/platos')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver los platos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a5af490-2bd1-4a81-8f6e-a1def32d0a89",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Editar_Plato",
+      "targets": [
+        ["id=Btn_Editar_Plato", "id"],
+        ["linkText=Editar", "linkText"],
+        ["xpath=//a[contains(text(),'Editar')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Editar_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato_Admin']/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/platos/edit/36/1')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e89d20d-758a-41e2-a9be-daccf62c189f",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputImgPlato",
+      "targets": [
+        ["id=InputImgPlato", "id"],
+        ["css=#InputImgPlato", "css:finder"],
+        ["xpath=//textarea[@id='InputImgPlato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd1001e5-2007-470f-88c0-c16f27afdecf",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn-edit",
+      "targets": [
+        ["id=Btn-edit", "id"],
+        ["css=#Btn-edit", "css:finder"],
+        ["xpath=//button[@id='Btn-edit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86dcdfd7-7a62-4e01-8239-e7ead75f29aa",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Editar_Plato",
+      "targets": [
+        ["id=Btn_Editar_Plato", "id"],
+        ["linkText=Editar", "linkText"],
+        ["xpath=//a[contains(text(),'Editar')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Editar_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato_Admin']/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/platos/edit/36/1')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "015dfc3e-5777-4385-9497-47beefbee948",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputImgPlato",
+      "targets": [
+        ["id=InputImgPlato", "id"],
+        ["css=#InputImgPlato", "css:finder"],
+        ["xpath=//textarea[@id='InputImgPlato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "https://tofuu.getjusto.com/orioneat-prod/LTJet7HdkcpY7oKtR-5V8A7987.jpg"
+    }, {
+      "id": "5b2b7843-66e6-456a-939a-6cbbf1e1f433",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ab73a04-c6ff-4991-ba5c-36c1415210b6",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "178359e0-5d88-4569-bc71-01aac78cf2ba",
+    "name": "PD-22-Verificar que no se edite un plato sin datos obligatorios",
+    "commands": [{
+      "id": "60606233-cdea-4718-a78f-f37360d98c63",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e273c6b8-aec9-43c9-a884-b9031bae03a4",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73e6b973-ac9f-4424-b62f-d0d2108d9a17",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "597b8073-bac4-434a-aec8-4b191193a699",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "d6d19844-62c0-4fa9-8c67-0e32a355e69f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d7a6edd-9cc5-4607-ae3a-eda0763773b7",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_VerPlatos_Restaurante",
+      "targets": [
+        ["id=Btn_VerPlatos_Restaurante", "id"],
+        ["linkText=Ver los platos", "linkText"],
+        ["xpath=//a[contains(text(),'Ver los platos')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_VerPlatos_Restaurante']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Restaurante_Admin']/div/div[2]/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/1/platos')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver los platos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e63227e-78f2-4f1c-8769-cb0ccfb50a89",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Editar_Plato",
+      "targets": [
+        ["id=Btn_Editar_Plato", "id"],
+        ["linkText=Editar", "linkText"],
+        ["xpath=//a[contains(text(),'Editar')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Editar_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato_Admin']/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/platos/edit/36/1')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02b08cd5-7d7b-43ee-8d60-3e93d2d80f69",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputNombre",
+      "targets": [
+        ["id=InputNombre", "id"],
+        ["css=#InputNombre", "css:finder"],
+        ["xpath=//input[@id='InputNombre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4edde75a-7a6c-4e36-9f7a-f111320d49dd",
+      "comment": "",
+      "command": "type",
+      "target": "id=InputDescp",
+      "targets": [
+        ["id=InputDescp", "id"],
+        ["css=#InputDescp", "css:finder"],
+        ["xpath=//input[@id='InputDescp']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "Nombre de prueba"
+    }, {
+      "id": "249295a3-ba9e-4f60-ab4f-833d2b3d435e",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn-edit",
+      "targets": [
+        ["id=Btn-edit", "id"],
+        ["css=#Btn-edit", "css:finder"],
+        ["xpath=//button[@id='Btn-edit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e9dfe61-ff54-4305-8206-540e29dd91a3",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "xpath=(//div[@id='Card_Plato_Admin'])[3]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c0c2da7-3ce5-4985-b7dc-8890623bd91d",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b91f5589-5cc2-49a5-93a7-aea0b3c3aeed",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3b85621e-7b20-46fd-93be-33c79f1f787b",
+    "name": "PD-25-Verificar una pagina de home",
+    "commands": [{
+      "id": "fbcdb4bc-0387-4e65-9e2f-8ef7d498a636",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89628e16-0136-45e4-8d86-034923e7d22f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Img_Portada_Empresa",
+      "targets": [
+        ["id=Img_Portada_Empresa", "id"],
+        ["css=#Img_Portada_Empresa", "css:finder"],
+        ["xpath=//img[contains(@src,'https://www.shutterstock.com/image-vector/fast-delivery-by-scooter-on-600nw-1540323020.jpg')]", "xpath:img"],
+        ["xpath=//img[@id='Img_Portada_Empresa']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcda4d8d-3ed8-4aa3-891b-da9300e7ca83",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=H3_Nombre_Proyecto",
+      "targets": [
+        ["id=H3_Nombre_Proyecto", "id"],
+        ["css=#H3_Nombre_Proyecto", "css:finder"],
+        ["xpath=//h3[@id='H3_Nombre_Proyecto']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Proyecto delivery 1.1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f078101-e00c-4178-8505-ddb67c9a09ba",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1b5a66f6-fc39-490a-bb0c-d1281e277864",
+    "name": "PD-26-Verificar el inicio de sesión de un usuario proveedor",
+    "commands": [{
+      "id": "cf8a8460-993a-48c3-b402-ad27d6a9490f",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3c913bc-d640-4ca0-9224-14fe5defe7d2",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25c557f7-1586-4093-be15-400740e787a4",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "alex"
+    }, {
+      "id": "78c3ecbc-13d7-45b5-a1d7-b49d3c4f2a84",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "d366f74c-2f18-42f7-ac84-215302d5b7cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "698c0d19-1dc4-4b4f-a98c-4e714c1639cc",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Card_Restaurante_Admin",
+      "targets": [
+        ["id=Card_Restaurante_Admin", "id"],
+        ["xpath=//div[@id='Card_Restaurante_Admin']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f398e349-5b54-4cd8-855d-21ae1a891d8c",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe1420c8-1af4-4c90-a2a4-606a6f0d8c4b",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "85b4fa09-2044-481c-8cc4-dca6bdb7b67b",
+    "name": "PD-27-Verificar el inicio de sesión de un usuario consumidor",
+    "commands": [{
+      "id": "b2f4697a-47ea-4889-ab80-861fa6eebd70",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71ddb87f-0353-46a3-b7e4-40c22a4c0f5f",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "893ccf5f-5d15-44e4-a2cf-c6960e053849",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "franco"
+    }, {
+      "id": "c7f1636b-b46b-4a1a-b599-9f4d608a5e28",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "c3f830d6-738c-4fe7-9608-cb95707d4fd7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9f412c0-1084-4c31-9007-a079f6bd136d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Card_Plato",
+      "targets": [
+        ["id=Card_Plato", "id"],
+        ["xpath=//div[@id='Card_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c84f8055-0666-4943-85c9-8ab356e93c54",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p:nth-child(1)",
+      "targets": [
+        ["css=p:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Eres consumidor Historial datos')]", "xpath:innerText"]
+      ],
+      "value": "Eres consumidor Historial datos"
+    }, {
+      "id": "b5d89662-759b-406c-b374-2c1702854c84",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49173861-313b-4030-84a9-0e48b1ff0d97",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "81718697-f6f3-4b62-80f7-d803ccd712f5",
+    "name": "PD-28-verificar el agregado de un plato a mi carrito",
+    "commands": [{
+      "id": "729527d8-782c-4f90-b23e-b707e460f395",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c64cc31a-8df4-4e48-9c3b-926bdf9ce827",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea129afd-1bc2-4c54-97ee-f437b1b98534",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "franco"
+    }, {
+      "id": "57aaaa09-fff5-44ff-b47b-0ea81370ab36",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "75ba84d5-b1c3-4792-8798-87f9774d939c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8db35551-6c82-49ee-b12e-44285e0cd245",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-brand",
+      "targets": [
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Navbar')]", "xpath:link"],
+        ["xpath=//nav[@id='Navbar']/div/a/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d3bac75-9632-4aab-bc2f-6ed74d0aa72a",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7130bd83-2277-4dda-b1f1-500a350c4675",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]",
+      "targets": [
+        ["xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='Card_Restaurante_Link']/div/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34b433de-daad-4cfe-9906-1449defcaa4c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='Card_Plato']/button",
+      "targets": [
+        ["xpath=//div[@id='Card_Plato']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar Al Carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb326ecb-0caa-4a47-95eb-980ab6cca9b7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'En el carrito')]", "xpath:innerText"]
+      ],
+      "value": "En el carrito"
+    }, {
+      "id": "df95b6b8-f2bc-4668-a815-00dacffe9041",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-cart-shopping > path",
+      "targets": [
+        ["css=.fa-cart-shopping > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fc3e779-9148-4255-8164-42b0bfddedfc",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=P_Descp_plato",
+      "targets": [
+        ["id=P_Descp_plato", "id"],
+        ["xpath=//p[@id='P_Descp_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Nombre de prueba')]", "xpath:innerText"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "2c5a8ae3-1ad3-4b41-884a-487bdbf2e76c",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7d87681-2f19-4043-8a13-4dd97d4b7f46",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "82e37b44-4d2e-4c7b-b35a-600403e99f7c",
+    "name": "PD-30-Verificar el aumento de la cantidad de plato que se desea ordenar en el carrito",
+    "commands": [{
+      "id": "2f0b0ea3-b349-43a7-be89-694ea3e38598",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24c1d0de-a9da-44ca-b0b7-b1548196cb48",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b042759f-8373-4377-b50e-6e665ba2085b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "franco"
+    }, {
+      "id": "9f80ea44-15fb-4eb2-9c5f-2c5b5f610a2c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "054dd33f-c84a-48b0-91f5-cd244aeb18d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dfe3dfc-dbef-4b13-8a94-5bf03919bece",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-brand",
+      "targets": [
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Navbar')]", "xpath:link"],
+        ["xpath=//nav[@id='Navbar']/div/a/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e459000-1834-4c03-91d4-0b20f21523be",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8766c879-3f90-49de-86d8-2fcdf90dcf5b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]",
+      "targets": [
+        ["xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='Card_Restaurante_Link']/div/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eeabdb55-2742-472e-ae25-53e395f5b1d1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='Card_Plato']/button",
+      "targets": [
+        ["xpath=//div[@id='Card_Plato']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar Al Carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46351732-7359-4c3a-a7a7-601bd854de53",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'En el carrito')]", "xpath:innerText"]
+      ],
+      "value": "En el carrito"
+    }, {
+      "id": "e871bcda-f274-4aaf-acb9-20408bd8af0c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-cart-shopping > path",
+      "targets": [
+        ["css=.fa-cart-shopping > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6b7374c-a521-4134-ba8d-1264643115d8",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=P_Descp_plato",
+      "targets": [
+        ["id=P_Descp_plato", "id"],
+        ["xpath=//p[@id='P_Descp_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Nombre de prueba')]", "xpath:innerText"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "8246590b-4737-47ee-9670-dd9ab4eb0512",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Card_Plato > button:nth-child(3)",
+      "targets": [
+        ["css=#Card_Plato > button:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Mas 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b72c6552-3d3b-456d-87fc-d13441ae3bf1",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[@id='P_Descp_plato'])[2]",
+      "targets": [
+        ["xpath=(//p[@id='P_Descp_plato'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Cantidad: 1')]", "xpath:innerText"]
+      ],
+      "value": "Cantidad: 2"
+    }, {
+      "id": "f759860e-f6e5-481f-ae64-f240a8676d51",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a09c929a-cbda-4c0d-aee0-4ef0b4f69db1",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2e657f3f-d24b-4a62-b342-479a6bfb892c",
+    "name": "PD-29-Verificar la disminución de la cantidad de plato que se desea ordenar en el carrito",
+    "commands": [{
+      "id": "922b4dce-e5ee-435b-87a2-7b6ec64497b3",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be4acb18-b36a-4925-ab9a-2afc20c49b1e",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf043f48-142f-4cc5-b04e-d52af1e62a85",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "franco"
+    }, {
+      "id": "9da746af-557f-47ae-a385-b3bb76b922f2",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "d6faa850-4084-4907-916b-e4225a67aaa5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c922861b-5d0c-4229-9bed-b6ba548def77",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-brand",
+      "targets": [
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Navbar')]", "xpath:link"],
+        ["xpath=//nav[@id='Navbar']/div/a/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a645bc7-82e7-4b84-8c42-ea156892b0a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc913e31-617e-4e9c-996d-b6db7005d689",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]",
+      "targets": [
+        ["xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='Card_Restaurante_Link']/div/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e07e289c-9891-4060-9a14-4652b8b0ccdc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='Card_Plato']/button",
+      "targets": [
+        ["xpath=//div[@id='Card_Plato']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar Al Carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d889a332-cd3c-4cec-b395-7768b114883d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'En el carrito')]", "xpath:innerText"]
+      ],
+      "value": "En el carrito"
+    }, {
+      "id": "ba470709-5b66-409e-b11c-24344a9c2b3a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-cart-shopping > path",
+      "targets": [
+        ["css=.fa-cart-shopping > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "44b5d75d-25af-408b-880b-df32fc4cd533",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=P_Descp_plato",
+      "targets": [
+        ["id=P_Descp_plato", "id"],
+        ["xpath=//p[@id='P_Descp_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Nombre de prueba')]", "xpath:innerText"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "e61aeb60-cce9-4391-afc1-ad6dd92b3fe4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Card_Plato > button:nth-child(3)",
+      "targets": [
+        ["css=#Card_Plato > button:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Mas 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9b0b068-706d-4801-ab6e-055a30ecb015",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[@id='P_Descp_plato'])[2]",
+      "targets": [
+        ["xpath=(//p[@id='P_Descp_plato'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Cantidad: 1')]", "xpath:innerText"]
+      ],
+      "value": "Cantidad: 2"
+    }, {
+      "id": "d9ba430a-deb4-404a-b56d-2adfc0e2b367",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(4)",
+      "targets": [
+        ["css=button:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Menos 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad170bcf-aef3-4e58-8c25-3256925f319f",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[@id='P_Descp_plato'])[2]",
+      "targets": [
+        ["xpath=(//p[@id='P_Descp_plato'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Cantidad: 1')]", "xpath:innerText"]
+      ],
+      "value": "Cantidad: 1"
+    }, {
+      "id": "3ed85555-69a7-4b78-95cf-c4600e29eb2b",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f162023d-5a4f-4953-808b-e7e17cc8bdf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "08cbae08-0c05-4b49-82eb-a24ffb023bc2",
+    "name": "PD-32-Verificar la eliminación de un producto del carrito",
+    "commands": [{
+      "id": "4dfe0d75-b95b-4969-8b3f-e91a70b37474",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3aea9aa-d842-409f-bf75-26836cea4db7",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c135a114-86d5-468b-9cb4-fa96a2691b86",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "franco"
+    }, {
+      "id": "506ac3bd-be14-4de6-8db4-802640df138b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "f3f11838-d14a-46bc-b799-3ec0323cc253",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f79c043b-bbe2-47b9-a8b5-7c753a7697f3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-brand",
+      "targets": [
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Navbar')]", "xpath:link"],
+        ["xpath=//nav[@id='Navbar']/div/a/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a459b11-2c97-4622-b0c0-59d8a7fa3ede",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae415eba-3338-4ad6-946c-3229f78720bf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]",
+      "targets": [
+        ["xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='Card_Restaurante_Link']/div/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfa60a1f-9f77-457b-90d0-d0fd2cefad0f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='Card_Plato']/button",
+      "targets": [
+        ["xpath=//div[@id='Card_Plato']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar Al Carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e3553c5-716c-43de-b132-19ffc038f54b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'En el carrito')]", "xpath:innerText"]
+      ],
+      "value": "En el carrito"
+    }, {
+      "id": "2d6638bc-7e86-47cf-851d-23f31704052a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-cart-shopping > path",
+      "targets": [
+        ["css=.fa-cart-shopping > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b810c7c2-4d4d-4503-8a5d-41609aa9a90c",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=P_Descp_plato",
+      "targets": [
+        ["id=P_Descp_plato", "id"],
+        ["xpath=//p[@id='P_Descp_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Nombre de prueba')]", "xpath:innerText"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "d1725ad2-459d-45dd-a268-f27b79d270b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Borrar del carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cac07ab-7412-48b0-9b29-3935eaccff5e",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "id=Card_Plato",
+      "targets": [
+        ["id=Card_Plato", "id"],
+        ["css=#Card_Plato", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31250997-170c-4a3c-bdfa-e66b072d674c",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb4ab24e-ab04-422f-a129-bb0a332c735c",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "838cbadf-5c19-4389-9b51-d70af4b514b1",
+    "name": "PD-31-Verificar la cancelación de los pedidos",
+    "commands": [{
+      "id": "5e612809-886b-4ee3-a857-155c5f73a334",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed5603fe-2ede-4a8e-b3a7-2cc9c549e77b",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [
+        ["id=bnt-Login", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=.navbar-text:nth-child(2) > #bnt-Login", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@id='bnt-Login']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavDropdown']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Login')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af4e0fa5-d699-4197-b973-3e4b78b9ae7e",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(2)",
+      "targets": [
+        ["css=.custom-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//div/form/input", "xpath:position"]
+      ],
+      "value": "franco"
+    }, {
+      "id": "4a836e5d-bed9-44ea-88bd-b5552fa17f4f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input:nth-child(4)",
+      "targets": [
+        ["css=.custom-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@value=''])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "6f377ae9-9db7-4a1e-b4a3-a7e1342add48",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-button",
+      "targets": [
+        ["css=.custom-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b47ba8b-c1a7-4694-948b-9eb825be2b32",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-brand",
+      "targets": [
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Navbar')]", "xpath:link"],
+        ["xpath=//nav[@id='Navbar']/div/a/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9195ab6-70fd-4d44-afb7-dce6977229a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=Btn_Restaurantes_User",
+      "targets": [
+        ["id=Btn_Restaurantes_User", "id"],
+        ["linkText=restaurantes", "linkText"],
+        ["css=#Btn_Restaurantes_User", "css:finder"],
+        ["xpath=//a[contains(text(),'restaurantes')]", "xpath:link"],
+        ["xpath=//a[@id='Btn_Restaurantes_User']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/restaurante')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'restaurantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47bdd208-7742-45a9-8643-c18df0c3f7ed",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]",
+      "targets": [
+        ["xpath=//img[contains(@src,'https://media-cdn.tripadvisor.com/media/photo-s/0d/cf/fc/00/sushi-sashimi-teller.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='Card_Restaurante_Link']/div/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83dd8c10-cb17-4148-b74f-97dbcd439812",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='Card_Plato']/button",
+      "targets": [
+        ["xpath=//div[@id='Card_Plato']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar Al Carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9903e4e9-5a6a-4ddd-9f30-b16877d2403e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'En el carrito')]", "xpath:innerText"]
+      ],
+      "value": "En el carrito"
+    }, {
+      "id": "3219e391-60ba-47af-8b56-f3d51bea8076",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-cart-shopping > path",
+      "targets": [
+        ["css=.fa-cart-shopping > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "411eb784-e106-4883-a2f8-d1cc06d259cc",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=P_Descp_plato",
+      "targets": [
+        ["id=P_Descp_plato", "id"],
+        ["xpath=//p[@id='P_Descp_plato']", "xpath:attributes"],
+        ["xpath=//div[@id='Card_Plato']/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Nombre de prueba')]", "xpath:innerText"]
+      ],
+      "value": "Mostrito 1/8 más Gaseosa"
+    }, {
+      "id": "3f181276-ce28-4854-8638-7f09bb9f3ec1",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Borrar del carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db96c948-0342-45ad-93bc-74a491aa5158",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "id=Card_Plato",
+      "targets": [
+        ["id=Card_Plato", "id"],
+        ["css=#Card_Plato", "css:finder"],
+        ["xpath=//div[@id='Card_Plato']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b9a85d9-8c11-4341-9300-18c2e296d37e",
+      "comment": "",
+      "command": "click",
+      "target": "id=bnt-Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96c7e3b1-47a2-44de-aaed-0f5434333010",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > button",
+      "targets": [
+        ["css=div:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "42e3ca67-2a48-4040-9c67-16d542f295ef",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}

@@ -29,13 +29,18 @@ const ComCrearRestaurante = () => {
     const navigete =useNavigate()
 
     const store=async(e)=>{
-        e.preventDefault()
-        const res =await axios.post(URI,{ImgPortada:ImgPortada,ImgLogo:ImgLogo
-            ,Nombre:Nombre,Direccion:Direccion,TimEnvio:TimEnvio
-            ,PrecEnvio:PrecEnvio,Calificacion:Calificacion,HorApertura:HorApertura
-            ,HorCerrar:HorCerrar,Ruc:Ruc,RazonSocial:RazonSocial,Id_User:parseJwt(localStorage.getItem('token')).id})
-        console.log(res.data)
-        navigete('/Login')
+        if(Nombre===""||Direccion===""||Ruc===""||RazonSocial===""){
+            alert('Faltan datos!')
+        }else{
+            e.preventDefault()
+            const res =await axios.post(URI,{ImgPortada:ImgPortada,ImgLogo:ImgLogo
+                ,Nombre:Nombre,Direccion:Direccion,TimEnvio:TimEnvio
+                ,PrecEnvio:PrecEnvio,Calificacion:Calificacion,HorApertura:HorApertura
+                ,HorCerrar:HorCerrar,Ruc:Ruc,RazonSocial:RazonSocial,Id_User:parseJwt(localStorage.getItem('token')).id})
+            console.log(res.data)
+            navigete('/Login')
+        }
+
         
     }
   return (
@@ -52,11 +57,11 @@ const ComCrearRestaurante = () => {
             </div>
             <div className="mb-3">
                 <label className="form-label">Nombre de restaurante</label>
-                <input required id="InputNombre" value={Nombre}  onChange={(e)=>setNombre(e.target.value)}  type="text" className="form-control"/>
+                <input  id="InputNombre" value={Nombre}  onChange={(e)=>setNombre(e.target.value)}  type="text" className="form-control"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Direccion de restaurante</label>
-                <input required id="InputDireccion" value={Direccion}  onChange={(e)=>setDireccion(e.target.value)}  type="text" className="form-control"/>
+                <input  id="InputDireccion" value={Direccion}  onChange={(e)=>setDireccion(e.target.value)}  type="text" className="form-control"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Tiempo de envio del restaurante</label>
@@ -82,11 +87,11 @@ const ComCrearRestaurante = () => {
             </div>
             <div className="mb-3">
                 <label className="form-label">Ruc</label>
-                <input required id="InputRuc" value={Ruc} onChange={(e)=>setRuc(e.target.value)} type="text" className="form-control"/>
+                <input  id="InputRuc" value={Ruc} onChange={(e)=>setRuc(e.target.value)} type="text" className="form-control"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Razon Social </label>
-                <input required id="InputRazonSocial" value={RazonSocial} onChange={(e)=>setRazonSocial(e.target.value)} type="text" className="form-control"/>
+                <input  id="InputRazonSocial" value={RazonSocial} onChange={(e)=>setRazonSocial(e.target.value)} type="text" className="form-control"/>
             </div>
             <button type="submit" className="btn btn-primary" id="btn-store">Crear</button>
         </form>
